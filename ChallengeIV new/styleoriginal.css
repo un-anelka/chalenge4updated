@@ -1,0 +1,471 @@
+/* @import url('./style.css'); */
+
+
+
+.container{
+    min-height: 100vh;
+    position: relative;
+    /* min-width: 100vw; */
+    /* background:tomato; */
+}
+
+
+
+.class1{
+    height: 34vh;
+    padding-left: 50vh;
+    padding-right: 50vh;
+    /* background-color: blue; */
+    background: url('/images/bg-desktop-dark.jpg');
+    display: flex;
+    justify-content:space-between;
+   
+    z-index: 1;
+
+}
+
+.class1 h1{
+    flex:1;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.class1 img{
+    flex: 0.04;
+    height: 33px;
+    width: 33px;
+    padding-top: 25px;
+}
+.class2{
+    height: 66vh;
+    background-color:hsl(237, 14%, 26%);
+    z-index: 2;
+
+}
+.class3{
+        width: 50%;
+        max-height: 50vh;
+        /* position: fixed; */
+        position: absolute;
+        z-index: 8;
+        top: 27vh;
+        left: 46vh;
+        /* overflow-y: auto;
+        overflow-x:hidden; */
+       
+}
+
+
+.classes{
+    height: 34vh;
+    padding-left: 50vh;
+    padding-right: 50vh;
+    /* background-color: blue; */
+    background: url('/images/bg-desktop-light.jpg');
+    display: flex;
+    justify-content:space-between;
+    color: hsl(233, 11%, 84%);
+    z-index: 1;
+    
+}
+
+.classes2{
+   
+        height: 66vh;
+        /* background-color:hsl(237, 14%, 26%); */
+        background-color:hsl(236, 33%, 92%);
+        z-index: 2;
+
+        height: 66vh;
+        /* background-color:hsl(237, 14%, 26%); */
+        z-index: 2;
+}
+
+.classes3{
+    /* background-color: hsl(0, 0%, 98%); */
+    width: 50%;
+    max-height: 50vh;
+    
+    position: absolute;
+    z-index: 8;
+    top: 27vh;
+    left: 46vh;
+}
+
+.classes3 .controls, .classinput, .classes3 .todo{
+    background: hsl(233, 11%, 84%);
+    color:hsl(237, 14%, 26%)
+}
+.classes3 .drag{
+    color:hsl(237, 14%, 26%)
+}
+.classinput::placeholder{
+    color:hsl(237, 14%, 26%);
+}
+/*Extracted from other file */
+
+form{
+    position: absolute;
+    z-index: 9;
+    top: 9vh;
+    left: 50vh;
+    width: 50%;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    /* background: hsl(234, 39%, 85%); */
+    background-color: hsl(234, 11%, 52%);
+    
+    
+    
+}
+form input{
+    width: 555px;
+    outline: none;
+    color: hsl(234, 39%, 85%);
+}
+form input::placeholder{
+    color: lightgrey;
+    text-align: center;
+
+}
+form button{
+    color: hsl(234, 39%, 85%);
+    /* background: hsl(234, 39%, 85%); */
+    background-color: hsl(234, 11%, 52%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    /* background: #d88771; */
+    background-color: hsl(234, 11%, 52%);
+    color: #ff6f47;
+}
+
+
+.todo-container{
+    max-height: 300px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x:hidden;
+    margin-bottom: 0;
+}
+
+.todo-container::-webkit-scrollbar-track{
+    
+    padding: 2px 0;
+    border: 1px solid grey;
+    background:#404040
+}
+.todo-container::-webkit-scrollbar{
+    width: 10px;
+    
+}
+.todo-container::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background:#737272
+}
+.todo-list{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+    list-style:none;
+    position:relative
+}
+
+.todo{
+    border-top:hsl(237, 14%, 26%) solid 3px;
+    width: 100%;
+    margin: 0rem 0 0rem 0.5rem;
+    background-color: hsl(234, 11%, 52%);
+    color:hsl(234, 39%, 85%);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.todo li{
+    
+    order: 2;
+}
+
+.todo .complete-btn{
+    order:1;
+}
+.todo .trash-btn{
+    order:3;
+}
+
+.trash-btn, .complete-btn{
+    background: #ff6f47;
+    color: hsl(234, 39%, 85%);
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    /* border-top:hsl(237, 14%, 26%) solid 3px; */
+}
+
+.complete-btn{
+    background: rgb(73, 204, 73);
+    
+}
+
+.todo-item{
+    padding: 0 0.5rem;
+}
+
+.fa-check,.fa-trash, .trash{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.checkbox{
+    visibility: hidden;
+}
+
+.completed .checkbox{
+    visibility: visible;
+    pointer-events: none;
+}
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+/* select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow:hidden;
+}
+
+select{
+   
+    width:10rem;
+    cursor: pointer;
+    color: #ff6f47;
+    padding: 1rem;
+}
+
+
+
+.select::after{
+    content:"\25BC";
+    position: absolute;
+    background:#ff6f47;
+    top:0;
+    right:0;
+    padding:1rem;
+    pointer-events: none;
+} */
+
+
+/* controls */
+
+.controls{
+    margin-top: 0;
+    margin-left: 55px;
+    width:535px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: hsl(234, 11%, 52%);
+    color:hsl(234, 39%, 85%);
+}
+
+#todosLeft, #clear-completed {
+    flex: 1;
+    margin-left: 6px;
+}
+
+.controls-list-div{
+    flex:2;
+    margin-left: 3px;
+    margin-right: 20px;
+
+}
+.controls-list li:active{
+    background:rgb(73, 204, 73);
+    color: red; 
+}
+
+.controls-list-div ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: -60px;
+   
+}
+.controls-list-div ul li{
+    margin-left:30px;
+    list-style: none;
+}
+
+
+.drag{
+    text-align: center;
+    margin-top: 30px;
+    color:hsl(234, 39%, 85%)
+}
+
+#completed:hover, #active:hover, #all:hover, #clear-completed:hover{
+    background: hsl(234, 39%, 85%);
+    color:hsl(235, 21%, 11%);
+}
+
+.classes3 #completed:hover, .classes3 #active:hover, .classes3 #all:hover, .classes3 #clear-completed:hover{
+    color: hsl(234, 39%, 85%);
+    background-color:hsl(235, 21%, 11%);
+}
+
+
+
+@media (max-width: 375px){
+    /* body{
+        display: none;
+    } */
+    .class1{
+        height: 34vh;
+        /* padding-left: 10vh; */
+        padding-left: 4vh;
+        padding-right: 5vh;
+        background: url('/images/bg-mobile-dark.jpg');
+        display: flex;
+        justify-content:space-between;
+        z-index: 1;
+    }
+
+    .classes{
+        background: url('/images/bg-mobile-light.jpg');
+    }
+   
+    .class3{
+            width: 90%;
+            max-height: 50vh;
+            position: absolute;
+            z-index: 8;
+            top: 25vh;
+            left: 1vh;           
+    }
+    
+    form{
+        position: absolute;
+        z-index: 9;
+        top: 9vh;
+        left: 2vh;
+        /* width: 95%; */
+        width: 300px;
+        margin-left: 17px;
+         min-height: 20vh;
+        
+    }
+    
+    form input, form button{
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: none;
+        background-color: hsl(234, 11%, 52%); 
+    }
+    form input{
+        outline: none;
+        color: hsl(234, 39%, 85%);
+    }
+    
+    
+    form button:hover{
+        background-color: white;
+        color:hsl(234, 11%, 52%);
+    }
+    
+    .todo-container::-webkit-scrollbar{
+        width: 5px;
+        
+    }
+    
+    
+    .todo{
+        margin-left: -25px;
+        height: 40px;
+    }
+    
+   
+    
+    .trash-btn, .complete-btn{
+        background: #ff6f47;
+        color: hsl(234, 39%, 85%);
+        border: none;
+        padding: 1.3rem;
+        cursor: pointer;
+        font-size: 0.7rem;
+        height: 35px;
+        border-top:hsl(237, 14%, 26%) solid 3px;
+        border-bottom:hsl(237, 14%, 26%) solid 1px;
+    }
+
+    .complete-btn{
+        background: rgb(73, 204, 73);
+        
+    }
+    
+    
+    /* controls */
+    
+    .controls{
+        font-size: 10px;
+        margin-top: 0;
+        margin-left: 23px;
+        width:88.5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: hsl(234, 11%, 52%);
+        color:hsl(234, 39%, 85%);
+        /* display: block; */
+        /* position:relative */
+    }
+    
+    #todosLeft, #clear-completed {
+        /* flex: 1; */
+        margin-left: 4px;
+        /* float: left; */
+    }
+    
+    .controls-list-div{
+        /* flex:1.5; */
+        margin-left: 1px;
+        margin-right: 2px;
+        display: flex;
+        /* position:absolute;
+        left:50%;
+        bottom: 50%; */
+    }   
+    
+
+}
