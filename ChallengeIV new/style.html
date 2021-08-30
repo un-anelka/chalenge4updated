@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List || Home 13</title>
+    <link rel="stylesheet" href="styleoriginal.css">
+</head>
+<body>
+    <div class="container">
+        <div class="class1">
+            <h1>To do</h1>
+            <img src="/images/icon-sun.svg" alt="icon-sun" id="image-one">
+        
+        </div>
+        <div class="class2">
+           
+        </div>
+        
+        <div class="class3">
+            
+
+            <div class="todo-container">
+                <ul class="todo-list">
+                    
+                </ul>
+                
+            </div>
+            
+            <div class="controls">
+                <p id="todosLeft"> <span class="pending"></span> Items left</p><!-- Add dynamic number -->
+                <div class="controls-list-div">
+                    <!-- <ul class="controls-list" data-lists> -->
+                    <ul class="controls-list">
+                        <li id="all">All</li>
+                        <li id="active">Active</li>
+                        <li id="completed">Completed</li>
+                    </ul>
+                </div>
+               <p id="clear-completed">Clear Completed</p> 
+            </div>
+            <p class="drag">Drag and Drop to reorder the list</p>
+        </div>
+
+        <div class="class4">
+            
+            <form action="">
+                <!-- <input type="text" class="todo-input"name="text" id="txt" required> -->
+                <input type="text" class="todo-input" placeholder="Create a new todo" required>
+                <button class="todo-button" type="submit"> 
+                    <i class="fas fa-plus-square"></i>+
+                </button>
+                <div class="select">
+                    <select name="todos" class="filter-todo">
+                        <option value="null"></option>
+                        <option value="all">All</option>
+                        <option value="completed">Completed</option>
+                        <option value="uncompleted">Uncompleted</option>
+                    </select>
+                </div>
+            </form>
+
+        </div>
+    </div>
+<!-- <img src="/images/icon-check.svg" class="check">
+<img src="/images/icon-moon.svg" class="check1"> -->
+    
+    <script src="styleoriginal.js"></script>
+</body>
+</html>
